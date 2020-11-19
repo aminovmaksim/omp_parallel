@@ -1,0 +1,2 @@
+zip ./tmp/archive.zip jacobi.c zeidel.c relax.c
+scp ./tmp/archive.zip s0085@umt.imm.uran.ru:/home/s0085
