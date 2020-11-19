@@ -1,0 +1,56 @@
+:Base Scripter.hlp
+1 Introducing Scripter
+2 Introducing Scripter=Introducing_Scripter
+2 Scripter Windows=Scripter_Windows
+2 Working with Script Documents=Working_with_Script_Documents
+2 Customizing the Scripter Windows=Customizing_the_Scripter_Windows
+2 Working with Code=Working_with_Code
+2 Compatibility with Visual Basic=Compatibility_with_Visual_Basic
+2 Object Browser=Object_Browser
+2 Type Library References=Type_Library_References
+2 Suggested Reading - Automation=Suggested_Reading_Automation
+1 Scripter Menu Commands
+2 File Menu Commands=File_Menu_Commands
+2 Edit Menu Commands=Edit_Menu_Commands
+2 View Menu Commands=View_Menu_Commands
+2 Script Menu Commands=Script_Menu_Commands
+2 Debug Menu Commands=Debug_Menu_Commands
+2 Sheet Menu Commands=Sheet_Menu_Commands
+2 Help Menu Commands=menu_help
+1 Writing Scripts
+2 Writing Scripts=Writing_Scripts
+2 Scripter Basic Language
+3 Scripter Basic Language=Scripter_Basic_Language
+3 Program Statements=Program_Statements
+3 Line Continuation=Line_Continuation_chp
+3 Comments in Scripter=Comments_in_Scripter
+3 Double Quotes and Text=Double_Quotes_and_Text
+3 Operators=Operators
+2 Variables
+3 Variables=Variables
+3 Object Variables=Object_Variables
+3 Array Variables=Array_Variables
+3 User-defined Types=User_defined_Types
+3 Global Variables=Global_Variables
+2 Subroutines and Functions
+3 Subroutines and Functions=Subroutines_and_Functions
+3 Writing Subroutines=Writing_Subroutines
+3 Writing Functions=Writing_Functions
+3 Built-in Functions and Procedures=Built_in_Functions_and_Procedures
+2 Modules
+3 Code, Class, and Object Modules=Code_Class_and_Object_Modules
+3 Module Types=Module_Types
+3 The '#Uses Line=The_Uses_Line
+3 Private and Public Definitions=Private_and_Public_Definitions
+3 Module Properties=Module_Properties
+3 Defining Object Properties and Methods=Defining_Object_Properties_and_Methods
+3 Example: Defining an ActiveX Object in a Class Module=Example_Defining_an_ActiveX_Object_in_a_Class_Module
+2 Getting User Input
+3 Getting User Input=Getting_User_Input
+3 Creating Dialog Boxes=Creating_Dialog_Boxes
+3 Example: Defining a Simple User Dialog=Example_Defining_a_Simple_User_Dialog
+1 Running Scripts
+2 Running Scripts from Scripter=Running_Scripts_from_Scripter
+2 Running Scripts from the Command Line=Running_Scripts_from_the_Command_Line
+1 Debugging Scripts
+2 Debugging Scripts=Debugging_Scripts

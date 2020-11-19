@@ -1,0 +1,689 @@
+;************************************************
+;*           Surfer Default Settings            *
+;*                                              *
+;*  Format:                                     *
+;*  Name[+ | *] = [Value]   [;Comment]          *
+;*                                              *
+;*  +  Save setting within session only         *
+;*  *  Save setting within and between sessions *
+;*                                              *
+;************************************************
+
+;===== $Hdr(File Open) ===========
+InSrf =           ;Default document file to open
+
+;===== $Hdr(File Import) =========
+fiFile =          ;Import filename
+
+;===== $Hdr(File Print) ==========
+prReduce+ =       ;Printing Method $Opt(Truncate=0,Fit to Page=1,Tile=2)
+prScale =         ;Printing Scale factor % (100=actual size)
+prXover+ =        ;Horizontal overlap when tiling (Page Units)
+prYover+ =        ;Vertical overlap when tiling (Page Units)
+prCopies+ =       ;Number of copies to print
+prCollate+ =      ;Collate multiple pages $Opt(No=0,Yes=1)
+prSelection+ =    ;Print selected objects only $Opt(No=0,Yes=1)
+
+;===== $Hdr(File Page Setup) ====
+xPageSize* = 20079 ;Page width (.001")
+yPageSize* = 27559 ;Page height (.001")
+Landscape* = 0    ;Landscape mode $Opt(No=0,Yes=1)
+lMargin* = 0.64008 ;Left margin in page units
+rMargin* = 0.64008 ;Right margin in page units
+tMargin* = 0.64008 ;Top margin in page units
+bMargin* = 0.64008 ;Bottom margin in page units
+
+;===== $Hdr(Edit Paste Special) ==
+PasteFmt =        ;Paste format string as it appears in dialog
+PasteBreak+ =     ;Break apart metafiles $Opt(No=0,Yes=1)
+
+;===== $Hdr(Arrange Rotate) ======
+Rotation =        ;For Arrange-Rotate command (in degrees)
+
+;===== $Hdr(Grid Data) ===========
+gdInFile =        ;Input data filename [.DAT]
+gdOutGrd =        ;Output grid filename [.GRD]
+gdOutFmt =        ;Output grid file format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gdXcol+ =         ;X data column (0-255)
+gdYcol+ =         ;Y data column (0-255)
+gdZcol+ =         ;Z data column (0-255)
+gdXmin =          ;Minimum X of grid in data units
+gdXmax =          ;Maximum X of grid in data units
+gdYmin =          ;Minimum Y of grid in data units
+gdYmax =          ;Maximum Y of grid in data units
+gdNrow =          ;Number of grid lines in Y direction
+gdNcol =          ;Number of grid lines in X direction
+gdMethod* = 1     ;Gridding Method $Opt(InvDist=0,Kriging=1,MinCurv=2,Shepards Method=3,Natural Neighbor=4,Nearest Neighbor=5,Polynomial Regression=6,Radial Basis=7,Triangulation=8,Moving Average=9,Statistics=10,Local Polynomial=11)
+gdoIgnoreOut+ =   ;Ignore points outside grid $Opt(No=0,Yes=1)
+gdoDupMethod =    ;Duplicate data to keep $Opt(All=0,None=1,First=2,Last=3,MinX=4,MaxX=5,MedX=6,MinY=7,MaxY=8,MedY=9,MinZ=10,MaxZ=11,MedZ=12,Sum=13,Average=14,MidRange=15,Random=16)
+gdxDupTol =       ;Duplicate X tolerance
+gdyDupTol =       ;Duplicate Y tolerance
+gdFilter =        ;Exclusion filter expression
+gdReport* = 0     ;Create report $Opt(No=0,Yes=1)
+gdFaultFile =     ;Fault file [.BLN]
+gdBreakFile =     ;Breakline file [.BLN]
+gdNoSearch =      ;No Search (use all data) $Opt(No=0,Yes=1)
+gdNumSect =       ;Number of sectors
+gdsDatPerSect =   ;Number of nearest points for search
+gdsMaxEmpty =     ;Max number of empty sectors
+gdsMinData =      ;Min number of data points for a valid sector
+gdsMaxData =      ;Max number of data points from all sectors
+gdsRad1 =         ;Search ellipse radius (data units)
+gdsRad2 =         ;Search ellipse radius (data units)
+gdsAngle =        ;Search ellipse angle (degrees)
+gdoPower+ =       ;Inverse Distance / Local Polynomial power
+gdoSmooth+ =      ;Smoothing factor for Inverse distance, Shepards
+gdoRad1 =         ;Anisotropy radius 1 for Shepards
+gdoRad2 =         ;Anisotropy radius 2 for Shepards
+gdoQuadN =        ;Quadratic Neighbors for Shepards
+gdoWeightN =      ;Weighting Neighbors for Shepards
+gdoRatio =        ;Anisotropy ratio for Inverse distance, Radial Basis
+gdoAngle =        ;Anisotropy angle
+gdoV1Type =       ;Variogram Component 1 Type $Opt(None=,Exponential=1,Gaussian=2,Linear=3,Logarithmic=4,Nugget=5,Power=6,Quadratic=7,Rational Quadratic=8,Spherical=9,Wave=10,Cubic=11,Pentaspherical=12)
+gdoV1Param1 =     ;Component 1 slope, scale, or error variance depending on Type
+gdoV1Param2 =     ;Component 1 power or micro variance depending on Type
+gdoV1Length =     ;Component 1 correlation length
+gdoV1Angle =      ;Component 1 anisotropy angle
+gdoV1Ratio =      ;Component 1 anisotropy ratio
+gdoV2Type =       ;Variogram Component 2 Type $Opt(None=,Exponential=1,Gaussian=2,Linear=3,Logarithmic=4,Nugget=5,Power=6,Quadratic=7,Rational Quadratic=8,Spherical=9,Wave=10,Cubic=11,Pentaspherical=12)
+gdoV2Param1 =     ;Component 2 slope, scale, or error variance depending on Type
+gdoV2Param2 =     ;Component 2 power or micro variance depending on Type
+gdoV2Length =     ;Component 2 correlation length
+gdoV2Angle =      ;Component 2 anisotropy angle
+gdoV2Ratio =      ;Component 2 anisotropy ratio
+gdoV3Type =       ;Variogram Component 3 Type $Opt(None=,Exponential=1,Gaussian=2,Linear=3,Logarithmic=4,Nugget=5,Power=6,Quadratic=7,Rational Quadratic=8,Spherical=9,Wave=10,Cubic=11,Pentaspherical=12)
+gdoV3Param1 =     ;Component 3 slope, scale, or error variance depending on Type
+gdoV3Param2 =     ;Component 3 power or micro variance depending on Type
+gdoV3Length =     ;Component 3 correlation length
+gdoV3Angle =      ;Component 3 anisotropy angle
+gdoV3Ratio =      ;Component 3 anisotropy ratio
+gdoDrift =        ;Kriging drift $Opt(No Drift=0,Linear=1,Quadratic=2)
+gdKrigType =      ;Kriging grid type $Opt(Point=0,Block=1)
+gdStdDevGrd =     ;Kriging std dev output grid name [.GRD]
+gdStdDevFmt =     ;Kriging std dev output format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gdoBasis+ =       ;Radial basis type $Opt(Inverse Multiquadric=0,MultiLog=1,MultiQuadric=2,Natural Cubic Spline=3,Thin Plate Spline=4)
+gdoRsq =          ;R squared
+gdoXorder+ =      ;Regression X order
+gdoYorder+ =      ;Regression Y order
+gdoTotOrder+ =    ;Regression total order
+gdoCopyCoef+ =    ;Copy Regression coefficients $Opt(No=0,Yes=1)
+gdoMaxIter =      ;Max. iterations for minimum curvature
+gdoIntTens =      ;Internal Tension for minimum curvature
+gdoBndTens =      ;Boundary Tension for minimum curvature
+gdoRelax =        ;Relaxation factor for minimum curvature
+gdoMaxResid =     ;Max. residual for minimum curvature
+gdoMetric* =      ;Data metric $Opt(Min=0,LowerQ=1,Median=2,UpperQ=3,Max=4,Range=5,MidRange=6,QRange=7,Mean=8,StdDev=9,Variance=10,Coefficient Variation=11,Median Absolute Deviation=12,RMS=13,Sum=14,Count=15,Density=16,Nearest=17,Farthest=18,Median Dist=19,Average Dist=20,Offset=21,Slope=22,Aspect=23)
+gdoLPOrder+ =     ;Local Polynomial order (1, 2, 3)
+gdoOutTri+ =      ;Output triangles $Opt(No=0,Yes=1)
+gdoTriFile =      ;Output triangle filename [.GSB]
+
+;===== $Hdr(Grid Data Cross Validation) ===========
+xvCount =         ;Cross validation count
+xvReport* = 1     ;Cross validation do report $Opt(No=0,Yes=1)
+xvOutFile =       ;Cross validation data output filename
+xvXTol =          ;Cross validation X tolerance
+xvYTol =          ;Cross validation Y tolerance
+xvXMin =          ;Cross validation X minimum
+xvXMax =          ;Cross validation X maximum
+xvYMin =          ;Cross validation Y minimum
+xvYMax =          ;Cross validation Y maximum
+xvZMin =          ;Cross validation Z minimum
+xvZMax =          ;Cross validation Z maximum
+
+;===== $Hdr(Grid Function) =======
+gfEquation+ =     ;Function equation
+gfXmin+ =         ;Function minimum X
+gfXmax+ =         ;Function maximum X
+gfXinc+ =         ;Function X increment
+gfYmin+ =         ;Function minimum Y
+gfYmax+ =         ;Function maximum Y
+gfYinc+ =         ;Function Y increment
+gfOutGrd =        ;Function output grid [.GRD]
+gfOutFmt =        ;Function grid format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+
+;===== $Hdr(Grid Math) ===========
+gmInGrd1 =        ;Math input grid 1 name [.GRD]
+gmInGrd2 =        ;Math input grid 2 name [.GRD]
+gmOutGrd =        ;Math output grid name [.GRD]
+gmOutFmt =        ;Output file format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gmEquation+ =     ;Math equation
+
+;===== $Hdr(Grid Calculus) =======
+gcInGrd =         ;Input filename [.GRD]
+gcOutGrd =        ;Output filename [.GRD]
+gcOutFmt =        ;Output file format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gcOperation+ =    ;Grid calculus operation $Opt(First=0,Second=1,Curvature=2,Slope=3,Aspect=4,ProfileCurvature=5,Plan=6,Tangential=7,Gradient=8,Laplacian=9,Biharmonic=10,Integrate=11,Correlogram=12,Periodogram=13)
+gcAngle+ =        ;Directional derivative "direction"
+gcGradMin+ =      ;Minimum gradient to compute aspect and curvature
+
+;===== $Hdr(Grid Filter) =========
+gfiInGrd =        ;Filter input file name [.GRD]
+gfiOutGrd =       ;Filter output file name [.GRD]
+gfiOutFmt =       ;Filter output format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gfiFilter* =      ;Filter type $Opt(Average=0,Dist Weighting=1,Inverse Distance=2,Gaussian Low-pass=3,User-defined=4,5-node + Avg=5,5-node X Avg=6,9-node Avg=7,Gaussian=8,Low-pass 1=9,Low-pass 2=10,Low-pass 3=11,Mean Removal=12,High-pass 1=13,High-pass 2=14,High-pass 3=15,Roberts row=16,Roberts column=17,Prewitt row=18,Prewitt column=19,Sobel row=20,Sobel column=21,FreiChen row=22,FreiChen column=23,Laplacian 1=24,Laplacian 2=25,Laplacian 3=26,Laplacian 4=27,Laplacian Diff=28,Diff of Gaussian (7x7)=29,Diff of Gaussian (9x9)=30,Horizontal=31,Vertical=32,East=33,Southeast=34,South=35,Southwest=36,West=37,Northwest=38,North=39,Northeast=40,East=41,Southeast=42,South=43,Southwest=44,West=45,Northwest=46,North=47,Northeast=48,Min=49,Lower Q=50,Median=51,Upper Q=52,Max=53,Range=54,Std Dev=55,Variance=56,Coef. of Var=57,Median Diff=58,Threshold Avg=59,Prewitt=60,Kirsch=61,Robinson 3=62,Robinson 5=63)
+gfiPasses =       ;Number of passes
+gfiEdge* =        ;Edge handling method
+gfiEdgeFill+ =    ;Edge fill value
+gfiBlnk* =        ;Blanked node handling method
+gfiBlnkFill+ =    ;Blank node fill value
+
+;===== $Hdr(Grid Spline Smooth) ==
+gssInGrd =        ;Smooth input file name [.GRD]
+gssOutGrd =       ;Smooth output file name [.GRD]
+gssOutFmt =       ;Smooth output format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gssInsRow+ =      ;Number of rows to insert
+gssInsCol+ =      ;Number of columns to insert
+gssNRow+ =        ;Grid Size (number of rows)
+gssNCol+ =        ;Grid Size (number of columns)
+gssMethod+ =      ;Spline smooth method $Opt(Insert=0,Recalc=1)
+
+;===== $Hdr(Grid Blank) ==========
+gbInGrd =         ;Blank input grid name [.GRD]
+gbInBln =         ;Blank boundary file name [.BLN]
+gbOutGrd =        ;Blanked output grid name [.GRD]
+gbOutFmt =        ;Blanked output format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+
+;===== $Hdr(Grid Convert) ========
+gcvtInGrd =       ;Input grid file name [.GRD]
+gcvtOutGrd =      ;Output grid file name [.GRD]
+gcvtOutFmt =      ;Output grid format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+
+;===== $Hdr(Grid Extract) ========
+gxInGrd =         ;Input filename [.GRD]
+gxOutGrd =        ;Output grid file [.GRD]
+gxOutFmt =        ;Output grid format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gxr1 =            ;First row of subgrid
+gxc1 =            ;First column of subgrid
+gxr2 =            ;Last row of subgrid
+gxc2 =            ;Last column of subgrid
+gxrFreq =         ;Row frequency
+gxcFreq =         ;Column frequency
+
+;===== $Hdr(Grid Transform) ======
+gtInGrd =         ;Input filename [.GRD]
+gtOutGrd =        ;Output grid file [.GRD]
+gtOutFmt =        ;Output grid format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+gtOp+ =           ;Operation $Opt(Offset=0,Scale=1,Rotate=2,Xmirror=3,Ymirror=4)
+gtxOff+ =         ;X offset
+gtyOff+ =         ;Y offset
+gtxScl+ =         ;X scale
+gtyScl+ =         ;Y scale
+gtAngle+ =        ;Rotation angle (in degrees)
+
+;===== $Hdr(Grid Volume) =========
+gvUpType =        ;Upper Surface $Opt(File=0,Constant=1)
+gvUpGrd =         ;Upper surface grid file name [.GRD]
+gvUpLevel+ =      ;Upper surface constant level value
+gvLowType =       ;Lower surface $Opt(File=0,Constant=1)
+gvLowGrd =        ;Lower surface grid file name [.GRD]
+gvLowLevel+ =     ;Lower surface constant level value
+gvZScale =        ;Z Scale factor
+
+;===== $Hdr(Grid Slice) ==========
+gsInGrd =         ;Input grid file name [.GRD]
+gsInBln =         ;Input boundary file [.BLN]
+gsOutside+ =      ;Use clip value outside grid $Opt(No=0,Yes=1)
+gsBlanked+ =      ;Use clip value over blank area $Opt(No=0,Yes=1)
+gsOutBln =        ;Output boundary file [.BLN]
+gsOutDat =        ;Output Grapher data file
+gsOutVal =        ;Value to use if outside grid
+gsBlnVal =        ;Value to use for blanked grid nodes
+
+;===== $Hdr(Grid Residuals) ======
+grInGrd =         ;Input grid file [.GRD]
+grXcol =          ;X worksheet column (0-255)
+grYcol =          ;Y worksheet column (0-255)
+grZcol =          ;Z worksheet column (0-255)
+grResidCol =      ;Column to store residuals in (0-255)
+
+;===== $Hdr(Grid Edit) ===========
+geInGrd =         ;Grid editor input grid file [.GRD]
+geInLvl =         ;Grid editor input level file
+geOutLvl =        ;Grid editor output level file
+geOutGrd =        ;Grid editor output grid file [.GRD]
+geOutFmt =        ;Grid editor output grid format $Opt(Binary=0,Ascii=1,XYZ=2,Surfer7=3)
+
+;===== $Hdr(Map Load Basemap) ====
+bmFile =          ;Load Basemap filename
+
+;===== $Hdr(Map Contour) =========
+cInGrd =          ;Input grid file name [.GRD]
+cMin =            ;Minimum contour in Z data units
+cMax =            ;Maximum contour in Z data units
+cInt =            ;Contour interval in Z data units
+cFill+ =          ;Fill contours $Opt(No=0,Yes=1)
+cSmooth+ =        ;Smooth contours $Opt(No=0,Yes=1)
+cHachDir+ =       ;Hachure direction $Opt(Down=0,Up=1)
+cColorScl+ =      ;Display color scale $Opt(No=0,Yes=1)
+cLabUp+ =         ;Orient labels "uphill" $Opt(No=0,Yes=1)
+cHachAll+ =       ;Hachure both closed and open contours $Opt(No=0,Yes=1)
+cSmoothAmt+ =     ;Smooth amount $Opt(Low=0,Medium=1,High=2)
+cBlnLine+ =       ;Blanked area line attributes
+cBlnFill+ =       ;Blanked area fill attributes
+cFltLine+ =       ;Fault line attributes
+cFont+ =          ;Contour label font properties
+cLabFmt+ =        ;Contour label format properties
+cLLDist+ =        ;Minimum label-label distance in page units
+cLEDist+ =        ;Minimum label-edge distance in page units
+cCurveTol+ =      ;Label curve tolerance (>1.0)
+cLabFirst+ =      ;First level to label (1=first)
+cLabSet+ =        ;Number of levels to label
+cLabSkip+ =       ;Number of levels to skip
+cHachLen+ =       ;Contour line hachure length in page units
+cHachFirst+ =     ;First level to hachure (1=first)
+cHachSet+ =       ;Number of levels to label
+cHachSkip+ =      ;Number of levels to skip
+cLineType+ =      ;Line attribute interpolation method $Opt(Uniform=0,Gradational=1)
+cMinLine+ =       ;Minimum contour line properties
+cMaxLineWidth+ =  ;Maximum line width for gradational attributes in page units
+cLineClr+ =       ;Color file [.CLR] for lines
+cMinLineData+ =   ;Data value at minimum line color
+cMaxLineData+ =   ;Data value at maximum line color
+cLineFirst+ =     ;First level to apply line attributes to (1=first)
+cLineSet+ =       ;Number of levels to set line attributes
+cLineSkip+ =      ;Number of levels to skip
+cMinFill+ =       ;Fill pattern and background mode for filled contours
+cFillFgClr+ =     ;Color file [.CLR] for foreground fill
+cMinFillFgData+ = ;Data value at minimum foreground fill color
+cMaxFillFgData+ = ;Data value at maximum foreground fill color
+cFillBgClr+ =     ;Color file [.CLR] for background fill
+cMinFillBgData+ = ;Data value at minimum background fill color
+cMaxFillBgData+ = ;Data value at maximum background fill color
+cFillFirst+ =     ;First level to apply fill attributes to (1=first)
+cFillSet+ =       ;Number of levels to set fill attributes
+cFillSkip+ =      ;Number of levels to skip
+cInLvl =          ;Input level file [.LVL]
+cOutLvl =         ;Output level file [.LVL]
+
+;===== $Hdr(Export Contours) =====
+ecFile =          ;Export Contours file name [.DXF]
+
+;===== $Hdr(Map Post) ============
+pXcol =           ;Worksheet column containing X coords (0-255)
+pYcol =           ;Worksheet column containing Y coords (0-255)
+pLabCol =         ;Worksheet column containing the label (0-255)
+pSymCol =         ;Worksheet column containing the symbol code (0-255)
+pAngCol =         ;Worksheet column containing symbol angle (0-255)
+pZcol =           ;Worksheet column containing value to class (0-255)
+pHtCol =          ;Worksheet column containing height (0-255)
+pSym+ =           ;Symbol properties
+pSymAng+ =        ;Symbol angle (degrees)
+pFont+ =          ;Font properties
+pLabFmt+ =        ;Label format properties
+pFreq+ =          ;Post frequency
+pPosType+ =       ;Label position $Opt(Center=0,Left=1,Right=2,Above=3,Below=4,User Defined=5)
+pXpos+ =          ;Label offset from symbol (page units)
+pYpos+ =          ;Label offset from symbol (page units)
+pLabAng+ =        ;Label angle (degrees)
+p3Dlen+ =         ;3d label line length (page units)
+p3Dline+ =        ;3d label line properties
+pSizeType+ =      ;Symbol size type $Opt(Fixed=0,Proportional=1)
+pScaleType+ =     ;Symbol scale type $Opt(Linear=0,Square Root=1)
+pSymHt1+ =        ;Symbol height at min Z (page units)
+pSymHt2+ =        ;Symbol height at max Z (page units)
+pDatHt1 =         ;Min Z for symbol height
+pDatHt2 =         ;Max Z for symbol height
+pClassType+ =     ;Class method $Opt(Equal Number=0,Equal Interval=1,User Defined=2)
+pLabPlane+ =      ;Label plane $Opt(XY=0,Screen=1)
+pNClass+ =        ;Number of classes
+pLegend+ =        ;Display legend $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Post Legend) =====
+lReverse+ =       ;Reverse order of legend items $Opt(No=0,Yes=1)
+lFrame+ =         ;Frame type $Opt(None=0,Rectangle=1,Rounded Rectangle=2)
+lFrameLine+ =     ;Frame line properties
+lFrameFill+ =     ;Frame fill properties
+lMargin+ =        ;Margin (in page units)
+lTitFont+ =       ;Title font properties
+lTitle+ =         ;Legend title
+lTextFont+ =      ;Legend item font
+lTemplate+ =      ;Legend item template
+lNumFmt+ =        ;Numeric format properties
+lSizeType+ =      ;Symbol size method $Opt(Font=0,Plot=1,User=2)
+lSize+ =          ;Symbol size (page units)
+
+;===== $Hdr(Map Image) ===========
+imInGrd =         ;Input filename [.GRD]
+imClr+ =          ;Color file [.CLR]
+imMinClrData+ =   ;Data value at minimum color
+imMaxClrData+ =   ;Data value at maximum color
+imInterp+ =       ;Interpolate pixels $Opt(No=0,Yes=1)
+imDither+ =       ;Dither bitmap if possible $Opt(No=0,Yes=1)
+imColorScl+ =     ;Display color scale $Opt(No=0,Yes=1)
+imNoDataClr+ =    ;Color for missing data (as in "Red")
+
+;===== $Hdr(Map Shaded Relief) ===
+rmInGrd =         ;Input filename [.GRD]
+rmClr+ =          ;Color file [.CLR]
+rmMinClrData+ =   ;Data value at minimum color
+rmMaxClrData+ =   ;Data value at maximum color
+rmDither+ =       ;Dither bitmap if possible $Opt(No=0,Yes=1)
+rmGradient+ =     ;Gradient method $Opt(Central Difference=0,Local=1)
+rmShade+ =        ;Shade method $Opt(Simple=0,Peucker=1,Lambertian=2,Lommel-Seeliger=3)
+rmAzimuth+ =      ;Azimuth in degrees (CCW, 0=East)
+rmZenith+ =       ;Zenith angle in degrees (0=horiz, 90=vertical)
+rmZScale =        ;Z Scale factor
+rmNoDataClr+ =    ;Color for missing data (as in "Red")
+
+;===== $Hdr(Map Wireframe) =======
+sInGrd =          ;Input grid file name [.GRD]
+sInLvl =          ;Default input LVL file [.LVL]
+sOutLvl =         ;Default output LVL file [.LVL]
+sInZone =         ;Default input color zone file [.LVL]
+sOutZone =        ;Default output color zone file [.LVL]
+sPlotX+ =         ;Plot lines parallel to X $Opt(No=0,Yes=1)
+sPlotY+ =         ;Plot lines parallel to Y $Opt(No=0,Yes=1)
+sPlotZ+ =         ;Plot lines parallel to Z $Opt(No=0,Yes=1)
+sShowLow+ =       ;Show lower surface $Opt(No=0,Yes=1)
+sShowUp+ =        ;Show upper surface $Opt(No=0,Yes=1)
+sShowVert+ =      ;Show vertical base lines $Opt(No=0,Yes=1)
+sShowBase+ =      ;Show base $Opt(No=0,Yes=1)
+sRemHidden+ =     ;Remove hidden lines $Opt(No=0,Yes=1)
+sXzoned+ =        ;Color X lines using color zones $Opt(No=0,Yes=1)
+sYzoned+ =        ;Color Y lines using color zones $Opt(No=0,Yes=1)
+sZzoned+ =        ;Color Z lines using color zones $Opt(No=0,Yes=1)
+sColorScl+ =      ;Display a color scale $Opt(No=0,Yes=1)
+sXline+ =         ;X line properties
+sYline+ =         ;Y line properties
+sZline+ =         ;Z line properties
+sBaseLine+ =      ;Base line properties
+sBorder+ =        ;Show border $Opt(None=0,All Sides=1,Front Only=2)
+sMinZoneLine+ =   ;Minimum color zone line properties
+sMaxZoneLine+ =   ;Maximum color zone line properties
+sMin =            ;Minimum Z contour level
+sMax =            ;Maximum Z contour level
+sInt =            ;Z contour interval
+sMinLevLine =     ;Minimum level line properties
+sMaxLevLine =     ;Maximum level line properties
+sBaseHt =         ;Elevation of bottom of surface base
+
+;===== $Hdr(Map Surface) =========
+rsClr =           ;Color file [.CLR]
+rsMinClrData =    ;Data value at minimum color
+rsMaxClrData =    ;Data value at maximum color
+
+;===== $Hdr(Map Vector) ==========
+vmGrd1 =          ;First input grid
+vmGrd2 =          ;Second input grid
+vmColorGrd =      ;Grid to use for scaling colors
+vmCoordSys+ =     ;Coordinate system $Opt(Cartesian=0,Polar=1)
+vmAngleUnits+ =   ;Angle Units $Opt(Degrees=0,Radians=1)
+vmAngleSys+ =     ;Angle system $Opt(Bearing=0,Angle=1)
+vmSym+ =          ;Symbol code for vector symbols
+vmXFreq =         ;Plot every N nodes in X direction
+vmYFreq =         ;Plot every N nodes in Y direction
+vmClipSym+ =      ;Clip symbols to map edge $Opt(No=0,Yes=1)
+vmColorScl+ =     ;Plot a color scale $Opt(No=0,Yes=1)
+vmSymLine+ =      ;Symbol line properties
+vmSymFill+ =      ;Symbol fill properties
+vmColorMethod =   ;Symbol color method $Opt(None=0,Magnitude=1,Grid=2)
+vmLegend+ =       ;Show legend $Opt(No=0,Yes=1)
+vmDataLim =       ;Scale by data limits $Opt(No=0,Yes=1)
+vmSymOrg+ =       ;Symbol origin $Opt(Tail=0,Center=1,Head=2)
+vmSclMethod+ =    ;Scale method $Opt(Linear=0,Square root=1,lOgarithmic=2)
+vmMinMag =        ;Minimum magnitude for vector scaling
+vmMaxMag =        ;Maximum magnitude for vector scaling
+vmMinHead+ =      ;Minimum head size (page units)
+vmMaxHead+ =      ;Maximum head size (page units)
+vmMinShaft+ =     ;Minimum shaft size (page units)
+vmMaxShaft+ =     ;Maximum shaft size (page units)
+vmMinWidth+ =     ;Minimum symbol width (page units)
+vmMaxWidth+ =     ;Maximum symbol width (page units)
+vmReverse+ =      ;Reverse vector orientation $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Vector Legend) ===
+vmlTitle =        ;Legend title
+vmlTitFont+ =     ;Title font properties
+vmlFrame+ =       ;Frame type $Opt(None=0,Rectangle=1,Rounded Rectangle=2)
+vmlLine+ =        ;Frame line properties
+vmlFill+ =        ;Frame fill properties
+vmlMargin+ =      ;Margin (in page units)
+vmlMag =          ;Legend magnitudes (comma separated list)
+vmlFont+ =        ;Legend font attributes
+vmlFmt+ =         ;Legend number format
+vmlLim =          ;Use data limits in legend $Opt(No=0,Yes=1)
+vmlLayout+ =      ;Legend layout $Opt(Horizontal=0,Vertical=1)
+
+;===== $Hdr(Map Left Axis) =======
+lxTitle =         ;Axis title
+lxTitFont =       ;Axis title font properties
+lxTitX =          ;Axis title X offset (page units)
+lxTitY =          ;Axis title Y offset (page units)
+lxTitAng =        ;Axis title angle (degrees)
+lxLine =          ;Axis line properties
+lxLabFont =       ;Axis label font properties
+lxLabAng =        ;Axis label angle (degrees)
+lxLabDist =       ;Distance from axis to labels (page units)
+lxMinTT =         ;Minor tic type $Opt(None=0,Out=1,In=2,Cross=3)
+lxMinTL =         ;Minor tic length (page units)
+lxMajTT =         ;Major tic type $Opt(None=0,Out=1,In=2,Cross=3)
+lxMajTL =         ;Major tic length (page units)
+lxMinTF =         ;Minor tics per major -1
+lxMinGLine =      ;Minor grid line properties
+lxMajGLine =      ;Major grid line properties
+lxPlane =         ;Axis plane $Opt(XY=0,YZ=1,XZ=2)
+lxLabFmt =        ;Axis label format properties
+lxMinVal =        ;Minimum axis scaling value
+lxMaxVal =        ;Maximum axis scaling value
+lxCross1 =        ;Coordinate that this axis crosses axis 1
+lxCross2 =        ;Coordinate that this axis crosses axis 2
+lxMajInc =        ;Distance between major tics
+lxMinTic =        ;Coordinate of the minimum tic mark
+lxMaxTic =        ;Coordinate of the maximum tic mark
+lxShow =          ;Show axis $Opt(No=0,Yes=1)
+lxShowLab =       ;Show labels $Opt(No=0,Yes=1)
+lxShowMinG =      ;Show minor grid lines $Opt(No=0,Yes=1)
+lxShowMajG =      ;Show major grid lines $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Right Axis) ======
+rxTitle =         ;Axis title
+rxTitFont =       ;Axis title font properties
+rxTitX =          ;Axis title X offset (page units)
+rxTitY =          ;Axis title Y offset (page units)
+rxTitAng =        ;Axis title angle (degrees)
+rxLine =          ;Axis line properties
+rxLabFont =       ;Axis label font properties
+rxLabAng =        ;Axis label angle (degrees)
+rxLabDist =       ;Distance from axis to labels (page units)
+rxMinTT =         ;Minor tic type $Opt(None=0,Out=1,In=2,Cross=3)
+rxMinTL =         ;Minor tic length (page units)
+rxMajTT =         ;Major tic type $Opt(None=0,Out=1,In=2,Cross=3)
+rxMajTL =         ;Major tic length (page units)
+rxMinTF =         ;Minor tics per major -1
+rxMinGLine =      ;Minor grid line properties
+rxMajGLine =      ;Major grid line properties
+rxPlane =         ;Axis plane $Opt(XY=0,YZ=1,XZ=2)
+rxLabFmt =        ;Axis label format properties
+rxMinVal =        ;Minimum axis scaling value
+rxMaxVal =        ;Maximum axis scaling value
+rxCross1 =        ;Coordinate that this axis crosses axis 1
+rxCross2 =        ;Coordinate that this axis crosses axis 2
+rxMajInc =        ;Distance between major tics
+rxMinTic =        ;Coordinate of the minimum tic mark
+rxMaxTic =        ;Coordinate of the maximum tic mark
+rxShow =          ;Show axis $Opt(No=0,Yes=1)
+rxShowLab =       ;Show labels $Opt(No=0,Yes=1)
+rxShowMinG =      ;Show minor grid lines $Opt(No=0,Yes=1)
+rxShowMajG =      ;Show major grid lines $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Bottom Axis) =====
+bxTitle =         ;Axis title
+bxTitFont =       ;Axis title font properties
+bxTitX =          ;Axis title X offset (page units)
+bxTitY =          ;Axis title Y offset (page units)
+bxTitAng =        ;Axis title angle (degrees)
+bxLine =          ;Axis line properties
+bxLabFont =       ;Axis label font properties
+bxLabAng =        ;Axis label angle (degrees)
+bxLabDist =       ;Distance from axis to labels (page units)
+bxMinTT =         ;Minor tic type $Opt(None=0,Out=1,In=2,Cross=3)
+bxMinTL =         ;Minor tic length (page units)
+bxMajTT =         ;Major tic type $Opt(None=0,Out=1,In=2,Cross=3)
+bxMajTL =         ;Major tic length (page units)
+bxMinTF =         ;Minor tics per major -1
+bxMinGLine =      ;Minor grid line properties
+bxMajGLine =      ;Major grid line properties
+bxPlane =         ;Axis plane $Opt(XY=0,YZ=1,XZ=2)
+bxLabFmt =        ;Axis label format properties
+bxMinVal =        ;Minimum axis scaling value
+bxMaxVal =        ;Maximum axis scaling value
+bxCross1 =        ;Coordinate that this axis crosses axis 1
+bxCross2 =        ;Coordinate that this axis crosses axis 2
+bxMajInc =        ;Distance between major tics
+bxMinTic =        ;Coordinate of the minimum tic mark
+bxMaxTic =        ;Coordinate of the maximum tic mark
+bxShow =          ;Show axis $Opt(No=0,Yes=1)
+bxShowLab =       ;Show labels $Opt(No=0,Yes=1)
+bxShowMinG =      ;Show minor grid lines $Opt(No=0,Yes=1)
+bxShowMajG =      ;Show major grid lines $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Top Axis) ========
+txTitle =         ;Axis title
+txTitFont =       ;Axis title font properties
+txTitX =          ;Axis title X offset (page units)
+txTitY =          ;Axis title Y offset (page units)
+txTitAng =        ;Axis title angle (degrees)
+txLine =          ;Axis line properties
+txLabFont =       ;Axis label font properties
+txLabAng =        ;Axis label angle (degrees)
+txLabDist =       ;Distance from axis to labels (page units)
+txMinTT =         ;Minor tic type $Opt(None=0,Out=1,In=2,Cross=3)
+txMinTL =         ;Minor tic length (page units)
+txMajTT =         ;Major tic type $Opt(None=0,Out=1,In=2,Cross=3)
+txMajTL =         ;Major tic length (page units)
+txMinTF =         ;Minor tics per major -1
+txMinGLine =      ;Minor grid line properties
+txMajGLine =      ;Major grid line properties
+txPlane =         ;Axis plane $Opt(XY=0,YZ=1,XZ=2)
+txLabFmt =        ;Axis label format properties
+txMinVal =        ;Minimum axis scaling value
+txMaxVal =        ;Maximum axis scaling value
+txCross1 =        ;Coordinate that this axis crosses axis 1
+txCross2 =        ;Coordinate that this axis crosses axis 2
+txMajInc =        ;Distance between major tics
+txMinTic =        ;Coordinate of the minimum tic mark
+txMaxTic =        ;Coordinate of the maximum tic mark
+txShow =          ;Show axis $Opt(No=0,Yes=1)
+txShowLab =       ;Show labels $Opt(No=0,Yes=1)
+txShowMinG =      ;Show minor grid lines $Opt(No=0,Yes=1)
+txShowMajG =      ;Show major grid lines $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Z Axis) ==========
+zxTitle =         ;Axis title
+zxTitFont =       ;Axis title font properties
+zxTitX =          ;Axis title X offset (page units)
+zxTitY =          ;Axis title Y offset (page units)
+zxTitAng =        ;Axis title angle (degrees)
+zxLine =          ;Axis line properties
+zxLabFont =       ;Axis label font properties
+zxLabAng =        ;Axis label angle (degrees)
+zxLabDist =       ;Distance from axis to labels (page units)
+zxMinTT =         ;Minor tic type $Opt(None=0,Out=1,In=2,Cross=3)
+zxMinTL =         ;Minor tic length (page units)
+zxMajTT =         ;Major tic type $Opt(None=0,Out=1,In=2,Cross=3)
+zxMajTL =         ;Major tic length (page units)
+zxMinTF =         ;Minor tics per major -1
+zxMinGLine =      ;Minor grid line properties
+zxMajGLine =      ;Major grid line properties
+zxPlane =         ;Axis plane $Opt(XY=0,YZ=1,XZ=2)
+zxLabFmt =        ;Axis label format properties
+zxMinVal =        ;Minimum axis scaling value
+zxMaxVal =        ;Maximum axis scaling value
+zxCross1 =        ;Coordinate that this axis crosses axis 1
+zxCross2 =        ;Coordinate that this axis crosses axis 2
+zxMajInc =        ;Distance between major tics
+zxMinTic =        ;Coordinate of the minimum tic mark
+zxMaxTic =        ;Coordinate of the maximum tic mark
+zxShow =          ;Show axis $Opt(No=0,Yes=1)
+zxShowLab =       ;Show labels $Opt(No=0,Yes=1)
+zxShowMinG =      ;Show minor grid lines $Opt(No=0,Yes=1)
+zxShowMajG =      ;Show major grid lines $Opt(No=0,Yes=1)
+
+;===== $Hdr(Map Scale Bar) =======
+sbLabAng+ =       ;Label angle (degrees)
+sbDir =           ;Axis to track $Opt(X Axis=0,Y Axis=1,Z Axis=2)
+sbLine+ =         ;Line properties
+sbFont+ =         ;Font properties
+sbCycleSp+ =      ;Cycle spacing (data units)
+sbLabInc+ =       ;Label increment (arbitrary units)
+sbLabFmt+ =       ;Label format properties
+sbNCycle+ =       ;Number of cycles
+
+;===== $Hdr(Map Background) ======
+MapLine =         ;Map border line properties
+MapFill =         ;Map background fill properties
+
+;===== $Hdr(Map 3D View) =========
+MapRot =          ;Map rotation (degrees)
+MapTilt =         ;Map tilt (degrees)
+MapDist =         ;Map perspective distance (%)
+MapProj =         ;Map projection $Opt(Perspective=0,Orthographic=1)
+
+;===== $Hdr(Map Scale) ===========
+xDatPerPU =       ;Map X scale (data units per page unit)
+yDatPerPU =       ;Map Y scale (data units per page unit)
+zDatPerPU =       ;Map Z scale (data units per page unit)
+xLen =            ;Map X length (in page units)
+yLen =            ;Map Y length (in page units)
+zLen =            ;Map Z length (in page units)
+
+;===== $Hdr(Map Limits) ==========
+xMinLim =         ;Map limit (left)
+xMaxLim =         ;Map limit (right)
+yMinLim =         ;Map limit (bottom)
+yMaxLim =         ;Map limit (top)
+
+;===== $Hdr(Color Scale) =========
+csLine+ =         ;Line properties
+csFont+ =         ;Font properties
+csLabFmt+ =       ;Label format properties
+csLabAngle+ =     ;Label angle (in degrees)
+csLabBeg =        ;Index of first label
+csLabFreq =       ;Label frequency
+csLabMin =        ;Minimum label value
+csLabMax =        ;Maximum label value
+csLabInt =        ;Label interval
+
+;===== $Hdr(Variogram) ===========
+vXcol =           ;X data column (0-255)
+vYcol =           ;Y data column (0-255)
+vZcol =           ;Z data column (0-255)
+vDupMethod =      ;Duplicate data to keep $Opt(All=0,None=1,First=2,Last=3,MinX=4,MaxX=5,MedX=6,MinY=7,MaxY=8,MedY=9,MinZ=10,MaxZ=11,MedZ=12,Sum=13,Average=14,MidRange=15,Random=16)
+vxDupTol+ =       ;Duplicate X tolerance
+vyDupTol+ =       ;Duplicate Y tolerance
+vFilter =         ;Exclusion filter expression
+vMaxLag =         ;Maximum lag distance
+vAngDiv =         ;Angular divisions
+vRadDiv =         ;Radial divisions
+vDetrend =        ;Detrend method $Opt(None=0,Linear=1,Quadratic=2)
+vReport+ =        ;Create a report $Opt(No=0,Yes=1)
+vEst+ =           ;Estimator type $Opt(Variogram=0,Standardized Variogram=1,Autocovariance=2,Autocorrelation=3)
+vDir =            ;Lag direction (degrees)
+vTol+ =           ;Lag tolerance (degrees)
+vStep+ =          ;Direction step amount (degrees)
+vLags =           ;Number of lags
+vLagW =           ;Lag width
+vAutoLagW =       ;Auto Lag Width $Opt(No=0,Yes=1)
+vScale =          ;Vertical scale
+vAutoScale =      ;Auto vertical scale $Opt(No=0,Yes=1)
+vPrecis+ =        ;Autofit precision (%)
+vMaxIter+ =       ;Autofit maximum iterations
+vFitMethod+ =     ;Autofit method $Opt(Default=0,Least Absolute Value=1,Least Squares=2)
+vFitDist =        ;Autofit maximum distance to fit
+vTitle =          ;Variogram title
+vTitFont+ =       ;Title font attributes
+vSubTitFont+ =    ;Subtitle font attributes
+vShowSubTit+ =    ;Show subtitle $Opt(No=0,Yes=1)
+vShowLine+ =      ;Show experimental line $Opt(No=0,Yes=1)
+vShowSym+ =       ;Show experimental symbols $Opt(No=0,Yes=1)
+vShowVar+ =       ;Show variance line $Opt(No=0,Yes=1)
+vShowPairs+ =     ;Show number of pairs $Opt(No=0,Yes=1)
+vShowMod+ =       ;Show the variogram model $Opt(No=0,Yes=1)
+vExpSym+ =        ;Experimental symbol attributes
+vExpLine+ =       ;Experimental line attributes
+vVarLine+ =       ;Variance line attributes
+vModLine+ =       ;Model line attributes
+vPairsFont+ =     ;Pair label font attributes
+
+;===== $Hdr(Miscellaneous) =======
+AutoRedraw =      ;Enable AutoRedraw $Opt(No=0,Yes=1)

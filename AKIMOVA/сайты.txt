@@ -1,0 +1,69 @@
+
+
+http://parallel.uran.ru/ - выч. ресурсы в ИММ
+
+http://parallel.ru/ - НИВЦ МГУ (компьютеры - классы, классификация)
+
+http://www.jscc.ru/ - МСЦ РАН (суперкомпьютеры, аппаратные ресурсы)
+
+http://www.youtube.com/watch?v=3aaZ2miSYFE - "Ломоносов" МГУ
+
+http://supercomputer.susu.ac.ru/ - "Торнадо" ЮУрГУ
+ 
+http://supercomputer.susu.ac.ru/computers/tornado/
+
+http://tvkultura.ru/video/show/video_id/155339/brand_id/20898 - 1 лекция В.В. Воеводина
+
+http://tvkultura.ru/video/show/video_id/155335/brand_id/20898 - 2 лекция В.В. Воеводина
+
+http://top50.supercomputers.ru/?page=rating
+
+http://www.intuit.ru/video/59/ - CUDA
+
+http://rutube.ru/tracks/1587608.html - CUDA
+
+
+Классы параллельных компьютеров и классификация Флинна
+
+http://parallel.ru/computers/classes.html
+
+http://parallel.ru/computers/taxonomy/flynn.html
+
+
+http://www.parallel-school.ru/  школа
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
