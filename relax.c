@@ -7,7 +7,7 @@
 
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 
-#define N 256
+#define N 512
 #define EPS 0.001
 #define OMEGA 1.99
 
@@ -64,12 +64,13 @@ int main(int argc, char *argv[])
     do
     {
         dmax = 0;
-        #pragma omp parallel for shared(z, dmax) private(j, d, dm)
+        #pragma omp parallel for shared(z, dmax) private(j, d, dm) schedule(dynamic)
         for (i = 1; i <= N; i++)
         {
             for (j = 1; j <= N; j++)
             {
-                z[i][j] = (OMEGA / 4) * (z[i - 1][j] + u[i + 1][j] + z[i][j - 1] + u[i][j + 1] - h * h * FUN[i][j]) + (1 - OMEGA) * u[i][j];
+                z[i][j] = (OMEGA / 4) * (z[i - 1][j] + u[i + 1][j] + z[i][j - 1] + u[i][j + 1] - h * h * FUN[i][j]) 
+                    + (1 - OMEGA) * u[i][j];
                 d = fabs(TR[i][j] - z[i][j]);
                 dm = max(dm, d);
             }

@@ -7,7 +7,7 @@
 
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 
-#define N 256
+#define N 512
 #define EPS 0.001
 
 double getXY(int i)

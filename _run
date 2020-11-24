@@ -1,18 +1,20 @@
-if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]
+if [ -z "$1" ]
   then
     echo "usage: run.sh <program_file> <threads_from> <threads_to>"
-    echo -e "example: run.sh jacobi.c 2 8"
+    echo -e "example: run.sh jacobi.c"
     exit 1
 fi
 file=$1
 filename=${file%%.*}
 
 # Choose your compiler here if you do not use gcc-10
-gcc-10 ${filename}.c -o ${filename}.o -fopenmp
 
-for ((c=$2; c<=$3; c++))
+gcc-10 ${filename}.c -o ./tmp/${filename}.o -fopenmp
+
+echo '-----------------START-----------------'
+for c in 1 2 4 6 8 10
 do
-    echo "Running program for $c threads"
     export OMP_NUM_THREADS=$c
-    ./${filename}.o
+    ./tmp/${filename}.o
+    echo '---------------------------------------'
 done

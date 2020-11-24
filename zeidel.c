@@ -5,9 +5,9 @@
 #include <string.h>
 #include <omp.h>
 
-#define max(a,b) (((a) > (b)) ? (a) : (b))
+#define max(a, b) (((a) > (b)) ? (a) : (b))
 
-#define N 256
+#define N 512
 #define EPS 0.001
 
 double getXY(int i)
@@ -23,18 +23,23 @@ int main(int argc, char *argv[])
     static double FUN[N + 2][N + 2];
     int i, j;
 
-    // Prepare arrays 
-    for(i = 0; i <= N + 1; i++) {
-        for (j = 0; j <= N + 1; j++) {
+    // Prepare arrays
+    for (i = 0; i <= N + 1; i++)
+    {
+        for (j = 0; j <= N + 1; j++)
+        {
             double x = getXY(i);
             double y = getXY(j);
             TR[i][j] = (x * x - x + 1) * (y * y - y + 1);
             FUN[i][j] = 4 + 2 * x * x - 2 * x + 2 * y * y - 2 * y;
-            if (i == 0 || i == N + 1 || j == 0 || j == N + 1) {
-                if (y == 0 || y == 1) {
+            if (i == 0 || i == N + 1 || j == 0 || j == N + 1)
+            {
+                if (y == 0 || y == 1)
+                {
                     u[i][j] = x * x - x + 1;
                 }
-                if (x == 0 || x == 1) {
+                if (x == 0 || x == 1)
+                {
                     u[i][j] = y * y - y + 1;
                 }
             }
@@ -46,9 +51,9 @@ int main(int argc, char *argv[])
     FILE *fp;
     fp = fopen("./tmp/zeidel_iter.dat", "w+");
 
-    #pragma omp parallel
+#pragma omp parallel
     {
-        #pragma omp single
+#pragma omp single
         {
             int numThreads = omp_get_num_threads();
             printf("Threads count is: %d\n", numThreads);
@@ -56,7 +61,7 @@ int main(int argc, char *argv[])
     }
 
     int k = 0;
-    double dmax, dm, d;
+    double dmax, dm, dd, d;
     double h = 1.0 / (N + 1);
 
     double time = omp_get_wtime();
@@ -64,9 +69,9 @@ int main(int argc, char *argv[])
     {
         dmax = 0;
         #pragma omp parallel for shared(z, dmax) private(j, d, dm)
-        for (i = 1; i <= N; i++)
+        for (i = 1; i <= N; i = i + 1)
         {
-            for (j = 1; j <= N; j++)
+            for (j = 1; j <= N; j = j + 1)
             {
                 z[i][j] = 0.25 * (z[i - 1][j] + u[i + 1][j] + z[i][j - 1] + u[i][j + 1] - h * h * FUN[i][j]);
                 d = fabs(TR[i][j] - z[i][j]);
@@ -74,6 +79,7 @@ int main(int argc, char *argv[])
             }
             dmax = max(dmax, dm);
         }
+
         memcpy(u, z, sizeof(z));
         //fprintf(fp, "%d %f\n", k, dmax);
         k++;
